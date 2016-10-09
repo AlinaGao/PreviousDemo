@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS3图片轮播</title>
+		<style>
+			*{margin: 0;padding: 0;}
+			body{
+				background: #222;
+				font-size: 16px;
+				color: #999;
+				font-weight: 400;
+				overflow: hidden;
+			}
+			ul{
+				list-style: none;
+			}
+			.name{
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+			.name li span{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				animation: image 24s linear infinite; /*infinite无限循环*/
+				-webkit-animation: image 24s linear infinite;
+			}
+			.name li span img{
+				width: 100%;
+				height: auto;100%
+			}
+			.name li div{
+				z-index: 10;
+				position: absolute;
+				bottom: 100px;
+				width: 100%;
+				text-align: center;
+				opacity: 0;
+				color: #fff;
+				animation: title 24s linear infinite;
+				-webkit-animation: title 24s linear infinite;;
+			}
+			/*title位置*/
+			.name li:nth-child(2) div{
+				top: 100px;
+				left: -500px;
+			}
+			.name li:nth-child(3) div{
+				top: 320px;
+				left: 400px;
+			}
+			.name li:nth-child(4) div{
+				top: 400px;
+				left: -100px;
+			}
+			.name li:nth-child(5) div{
+				top: 190px;
+				left: 200px;
+			}
+			.name li:nth-child(6) div{
+				top: 200px;
+				left: -100px;
+			}
+			.name li div h3{
+				font-size: 40px;
+				line-height: 100px;
+			}
+			/*延时显示*/
+			.name li:nth-child(1) span,
+			.name li:nth-child(1) div{
+				animation-delay: 0s;
+				-webkit-animation-delay: 0s;
+			}
+			.name li:nth-child(2) span,
+			.name li:nth-child(2) div{
+				animation-delay: 4s;
+				-webkit-animation-delay: 4s;
+			}
+			.name li:nth-child(3) span,
+			.name li:nth-child(3) div{
+				animation-delay: 8s;
+				-webkit-animation-delay: 8s;
+			}
+			.name li:nth-child(4) span,
+			.name li:nth-child(4) div{
+				animation-delay: 12s;
+				-webkit-animation-delay: 12s;
+			}
+			.name li:nth-child(5) span,
+			.name li:nth-child(5) div{
+				animation-delay: 16s;
+				-webkit-animation-delay: 16s;
+			}
+			.name li:nth-child(6) span,
+			.name li:nth-child(6) div{
+				animation-delay: 20s;
+				-webkit-animation-delay: 20s;
+			}
+			@keyframes image{
+				0%{opacity: 0;}
+				8%{opacity: 1;}
+				16%{opacity: 1;}
+				26%{opacity: 0;}
+				100%{opacity: 0;}
+			}
+			@-webkit-keyframes image{
+				0%{opacity: 0;}
+				8%{opacity: 1;}
+				16%{opacity: 1;}
+				26%{opacity: 0;}
+				100%{opacity: 0;}
+			}
+			@keyframes title{
+				0%{opacity: 0;}
+				8%{opacity: 1;}
+				16%{opacity: 1;}
+				26%{opacity: 0;}
+				100%{opacity: 0;}
+			}
+			@-webkit-keyframes title{
+				0%{opacity: 0;}
+				8%{opacity: 1;}
+				16%{opacity: 1;}
+				26%{opacity: 0;}
+				100%{opacity: 0;}
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="name">
+			<li>
+				<span><img src="img/img01.jpg" alt="" /></span>
+				<div><h3>哈尔的移动城堡</h3></div>
+			</li>
+			<li>
+				<span><img src="img/img02.jpg" alt="" /></span>
+				<div><h3>火隐忍者</h3></div>
+			</li>
+			<li>
+				<span><img src="img/img03.jpg" alt="" /></span>
+				<div><h3>海贼王</h3></div>
+			</li>
+			<li>
+				<span><img src="img/img04.jpg" alt="" /></span>
+				<div><h3>红猪</h3></div>
+			</li>
+			<li>
+				<span><img src="img/img05.jpg" alt="" /></span>
+				<div><h3>起风了</h3></div>
+			</li>
+			<li>
+				<span><img src="img/img06.jpg" alt="" /></span>
+				<div><h3>龙猫</h3></div>
+			</li>
+		</ul>
+	</body>
+</html>
